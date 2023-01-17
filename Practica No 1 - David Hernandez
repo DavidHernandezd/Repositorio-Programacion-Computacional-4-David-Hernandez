@@ -1,0 +1,54 @@
+// David Arnoldo Hernández Gómez
+
+var nombres = ['jose', 'pedro', 'juan']
+
+function funcionDeclarativa(nombre){
+    console.log(`Buenas tardes, ${nombre}`)
+}
+const funcionExpresion = function(nombre){
+    console.log(`Hola, funcion expresion, ${nombre}`)
+}    
+const funcionFlecha = nombre => {
+    console.log(`Hola, funcion de flecha, ${nombre}`)
+}
+for(var i=0; i<nombres.length; i++){
+    funcionDeclarativa(nombres[i])
+    funcionExpresion(nombres[i])
+    funcionFlecha(nombres[i])
+}
+    
+///////////////////////////////
+var data =[
+    {nombre: 'jose', edad: '25'},
+    ]
+    
+var data =[
+    {nombre: 'jose', edad: '25'},
+    {nombre: 'alfredo', edad: 30},
+    {nombre: 'carmen', edad: 30},
+]
+data.forEach(function(dato){
+    console.log(dato.nombre)
+})
+
+data.filter(function(dato){
+    console.log(dato.edad > 25)
+})
+
+var resultado =data.filter(function(dato){
+    return dato.edad > 25
+})
+
+var resultado =data.map(function(dato){
+    return dato.nombre
+})
+
+////////////////////////////////////////
+var alumno = {
+    nombre: 'Pedro',
+    apellido: 'Guardado',
+
+    mostrarDatos: function(){
+            console.log(`${this.nombre}, ${this.apellido}`)
+    }
+}
